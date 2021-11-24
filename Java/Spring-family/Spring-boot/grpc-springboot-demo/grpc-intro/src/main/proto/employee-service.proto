@@ -1,0 +1,15 @@
+syntax="proto3";
+option java_multiple_files=true;
+option java_package="com.wscode.model";
+
+message EmployeeCheckRequest{
+  int32 employee_id=1;
+}
+
+message Employee{
+  int32 employee_ph=1;
+}
+
+service EmployeeService{
+  rpc getEmployee(EmployeeCheckRequest) returns (Employee);
+}

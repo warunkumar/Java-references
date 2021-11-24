@@ -1,0 +1,4 @@
+https://warun-aws.signin.aws.amazon.com/console
+
+user name: warun
+password: Welcome@001, Welcome@002	

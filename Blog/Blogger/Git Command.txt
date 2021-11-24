@@ -1,0 +1,7 @@
+**************************************************
+
+Git Command
+-------------
+git clone https://github.ibm.com/quicksilver/mediation-packs.git
+git fetch --all
+git checkout --track origin/DEV_1.0

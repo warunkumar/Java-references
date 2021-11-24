@@ -1,0 +1,20 @@
+**********************************************************
+
+Java installation
+=====================
+
+1 sudo yum install java-11-openjdk-devel
+2 java –version
+3 sudo alternatives --list
+4 sudo alternatives --config java
+
+How to Set JAVA_HOME Environment Variable
+-----------------
+
+1 sudo update-alternatives --config java
+2 select the java verson 1 or 2
+3 vim .bash_profile
+4 JAVA_HOME=”/usr/lib/jvm/java-11-openjdk-11.0.13.0.8-1.el8_4.x86_64/bin/java”
+
+
+
