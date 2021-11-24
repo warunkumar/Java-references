@@ -1,0 +1,19 @@
+
+<<<<<<<<<<<<<<<<<< PostGresSQL >>>>>>>>>>>>>>>>>>>>>>>>
+
+Create Table
+------------
+
+CREATE TABLE ACCOUNT(
+   account_id	BIGSERIAL	NOT NULL,
+   account_number  BIGINT	NOT NULL,
+   current_balance	REAL	NOT NULL,
+   CONSTRAINT account_pkey PRIMARY KEY ("account_id")
+);
+
+CREATE TABLE ACCOUNT(
+   account_id	BIGSERIAL	NOT NULL,
+   account_number  BIGINT	NOT NULL,
+   current_balance	REAL	NOT NULL,
+   CONSTRAINT account_pkey PRIMARY KEY ("account_id")
+);
