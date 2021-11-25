@@ -1,0 +1,27 @@
+
+=============================
+	Aws Demo
+=============================
+
+Plateform 
+------------
+
+Amazon Linux (Inferred)
+
+
+1) Switch to the root directory
+	sudo -i
+2) Install the JDK
+	In order to install java 11:
+	sudo amazon-linux-extras install java-openjdk11
+		For java 8 you can try:
+	sudo yum install java-1.8.0-openjdk
+		Finally, if you want to switch between java versions run:
+	sudo alternatives --config java
+	
+	
+
+3) S3 jar added
+		wget https://warun-application-files.s3.amazonaws.com/springboot-sample-app-0.0.1-SNAPSHOT.jar
+4) Running our jar
+	java -jar springboot-sample-app-0.0.1-SNAPSHOT.jar
