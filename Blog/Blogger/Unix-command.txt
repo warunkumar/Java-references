@@ -1,0 +1,77 @@
+
+<<<<<<<<<<<<<<<<<<<<<<< Working on Linux  >>>>>>>>>>>>>>>>>>>>>>>
+
+Process to set Maven in VM
+===================================
+
+wget https://www-us.apache.org/dist/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz -P /tmp
+
+https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz
+
+wget https://dlcdn.apache.org/maven/maven-3/3.8.3/binaries/apache-maven-3.8.3-bin.tar.gz -P /tmp
+
+sudo tar xf /tmp/apache-maven-3.8.3-bin.tar.gz -C /opt
+
+sudo ln -s /opt/apache-maven-3.8.3 /opt/maven
+
+sudo vi /etc/profile.d/maven.sh
+
+export JAVA_HOME=/usr/lib/jvm/jre-11-openjdk
+export M2_HOME=/opt/maven
+export MAVEN_HOME=/opt/maven
+export PATH=${M2_HOME}/bin:${PATH}
+
+sudo chmod +x /etc/profile.d/maven.sh
+
+source /etc/profile.d/maven.sh
+
+
+
+
+-----------------------------
+To run as jars
+-> mvn clean compile
+-> mvn install
+-> java -jar target/grpc-server-0.0.1-SNAPSHOT.jar
+-> java -jar -DDATACONNECTOR_PORT=8282 -DGRPC_SERVER_URL="static://9.30.119.93:8484" target/nagios-connector-0.0.1-SNAPSHOT.jar
+
+
+
+
+
+
+
+=============================While Working on CentOS  ====================================
+
+How to set t
+
+
+*******************************************************************************************************
+Project running config
+
+export GITHUB_TOKEN=****
+
+
+===================== NagiosXI  =====================================
+
+------------------
+local:
+
+http://10.11.40.153/nagiosxi/
+
+un: nagiosadmin
+pw: nagiosadmin
+
+
+
+ssh -C -L 5901:localhost:5901 vncuser@9.30.45.235
+
+
+
+
+Restart vncsrver with vncserver -geometry 1280x720
+
+
+
+
+mv /usr/bin/gnome-session /tmp.  login to vncuser, cd .vnc and run  vncserver -geometry 1920x1200, check log file, there should be NO ERROR in the log, exit from vncuser, try netstat -anp | grep 590, you should see 5901/5902 port in the list , now connect from your laptop using VNC viewer

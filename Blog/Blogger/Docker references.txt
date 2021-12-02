@@ -1,0 +1,47 @@
+========================================= Docker ==========================================
+
+
+
+Docker basic commands
+----------------------
+
+docker build -t nagios .
+
+docker run -d -p 8282:8282 -eDATACONNECTOR_PORT=8282 -eGRPC_SERVER_URL="static://192.168.0.104:8484" --name nagios nagios
+
+docker images -List of Images
+
+docker ps -a - List all processes
+
+docker ps - List only running processes
+
+
+
+
+
+
+
+
+
+
+
+Docker set up for nagios
+--------------------------
+
+
+docker build -t nagios .
+
+docker run -d -p 8282:8282 -eDATACONNECTOR_PORT=8282 -eGRPC_SERVER_URL="static://192.168.0.104:8484" --name nagios nagios
+
+docker images -List of Images
+
+docker ps -a - List all processes
+
+docker ps - List only running processes
+
+
+
+
+docker run -d -p 8282:8282 -eDATACONNECTOR_PORT=8282 -eGRPC_SERVER_URL="static://192.168.190.67:8484" --name nagios nagios
+
+docker run -d -p 8282:8282 -eDATACONNECTOR_PORT=8282 -eGRPC_SERVER_URL="static://9.30.218.76:8484" --name nagios nagios

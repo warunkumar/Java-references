@@ -1,0 +1,28 @@
+server:
+  port: ${DATACONNECTOR_PORT}
+
+scheduling:
+  enabled: true
+
+#  Pagination Configuration
+pagination:
+  limit: 600
+
+webclient:
+  response-size: 2 #2MB
+
+# Make sure Query Param & other related info is part of URL itself
+datasource:
+  resources:
+    - /nagiosxi/api/v1/objects/hoststatus   # Host Status URL
+    - /nagiosxi/api/v1/objects/servicestatus # Service Status URL
+
+# Add gRPC Server config
+grpc:
+  client:
+    grpc-service:
+      address: ${GRPC_SERVER_URL}
+      negotiation-type: plaintext
+#      negotiationType: TLS
+#      security:
+#        trustCertCollection: classpath:ca.cert.pem

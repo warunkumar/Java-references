@@ -1,0 +1,81 @@
+<configuration>
+
+    <property name="LOG_PATTERN" value="%date %level [%thread] %logger{10} : %msg%n"/>
+    <property name="LOG_PATH" value="/logs"/>
+    <property name="ROOT_FOLDER" value="connector-logs"/>
+    <property name="APP_NAME" value="nagios"/>
+    <property name="HOST_STATUS_FOLDER" value="host_status"/>
+    <property name="SERVICE_STATUS_FOLDER" value="service_status"/>
+    <property name="CLOUD_EVENT_FOLDER" value="cloud_event"/>
+
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="hoststatus-log" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${ROOT_FOLDER}/${APP_NAME}/${HOST_STATUS_FOLDER}/datasource.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOG_PATH}/${ROOT_FOLDER}/${APP_NAME}/${HOST_STATUS_FOLDER}/%d{yyyy-MM-dd, aux}/datasource.%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <maxFileSize>20KB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>10MB</totalSizeCap>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="servicestatus-log" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${ROOT_FOLDER}/${APP_NAME}/${SERVICE_STATUS_FOLDER}/datasource.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOG_PATH}/${ROOT_FOLDER}/${APP_NAME}/${SERVICE_STATUS_FOLDER}/%d{yyyy-MM-dd, aux}/datasource.%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <maxFileSize>20KB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>10MB</totalSizeCap>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+    </appender>
+
+    <appender name="cloudevent-log" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>${LOG_PATH}/${ROOT_FOLDER}/${APP_NAME}/${CLOUD_EVENT_FOLDER}/cloudevent.log</file>
+        <encoder>
+            <pattern>${LOG_PATTERN}</pattern>
+        </encoder>
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <fileNamePattern>
+                ${LOG_PATH}/${ROOT_FOLDER}/${APP_NAME}/${CLOUD_EVENT_FOLDER}/%d{yyyy-MM-dd, aux}/cloudevent.%d{yyyy-MM-dd}.%i.log
+            </fileNamePattern>
+            <maxFileSize>20KB</maxFileSize>
+            <maxHistory>30</maxHistory>
+            <totalSizeCap>10MB</totalSizeCap>
+            <cleanHistoryOnStart>true</cleanHistoryOnStart>
+        </rollingPolicy>
+    </appender>
+
+    <root level="INFO">
+        <appender-ref ref="console"/>
+    </root>
+
+    <logger name="hoststatus-logger" level="DEBUG" additivity="false">
+        <appender-ref ref="hoststatus-log"/>
+    </logger>
+
+    <logger name="servicestatus-logger" level="DEBUG" additivity="false">
+        <appender-ref ref="servicestatus-log"/>
+    </logger>
+
+    <logger name="cloudevent-logger" level="DEBUG" additivity="false">
+        <appender-ref ref="cloudevent-log"/>
+    </logger>
+
+</configuration>

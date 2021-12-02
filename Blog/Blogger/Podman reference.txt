@@ -1,0 +1,20 @@
+
+
+
+<<<<<<<<<<<<<<<<<<Install Podman, Dockerize and run the images >>>>>>>>>>>>>>>>>>>>>>>>>>
+
+
+
+https://podman.io/getting-started/installation
+
+
+
+-> podman build -t grpc-server .
+-> podman build -t nagios .
+-> podman run -d -p 8484:8484 --name server localhost/grpc-server
+-> podman run -d -p 8282:8282 -eDATACONNECTOR_PORT=8282 -eGRPC_SERVER_URL="static://9.30.119.93:8484" --name nagios localhost/nagios
+-> podman images
+-> podman ps -a
+-> podman logs nagios
+-> podman logs server
+-> podman logs -f nagios

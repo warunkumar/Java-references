@@ -5,3 +5,32 @@ Git Command
 git clone https://github.ibm.com/quicksilver/mediation-packs.git
 git fetch --all
 git checkout --track origin/DEV_1.0
+
+
+
+
+
+
+============================  Git  ===========================================
+
+
+** IBM sample proto data
+https://github.ibm.com/katamari/cp4waiops-connectors/blob/master/templates/grpc-clients/connector.proto
+
+
+GitHub releted info
+*******************
+
+UN: warun.kumar.upadhyay@ibm.com
+Key: c4c9d6f4d32853d8e7e1e32b95b838660aa3a8c5
+
+
+https://github.ibm.com/quicksilver/mediation-packs.git
+git clone https://github.ibm.com/quicksilver/mediation-packs.git
+
+git checkout -b DEV_1.0
+git checkout -b DEV_1.0 --track origin/develop
+git pull DEV_1.0
+git switch DEV_1.0
+git checkout --track origin/DEV_1.0
+

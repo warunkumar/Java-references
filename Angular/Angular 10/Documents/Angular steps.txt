@@ -1,0 +1,5 @@
+
+<<<<<<<<<<<<<<<< Angular 10 >>>>>>>>>>>>>>>>>>>>>
+
+1) Install angular
+npm install -g @angular/cli

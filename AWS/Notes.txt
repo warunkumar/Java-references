@@ -22,6 +22,13 @@ Amazon Linux (Inferred)
 	
 
 3) S3 jar added
-		wget https://warun-application-files.s3.amazonaws.com/springboot-sample-app-0.0.1-SNAPSHOT.jar
+		wget https://warun-files.s3.amazonaws.com/springboot-sample-app.war
+		wget https://warun-files.s3.amazonaws.com/springboot-sample-app.jar
+		
 4) Running our jar
-	java -jar springboot-sample-app-0.0.1-SNAPSHOT.jar
+	java -jar springboot-sample-app.jar
+	
+	
+5) Maven Run command:
+		mvn spring-boot:run
+	
