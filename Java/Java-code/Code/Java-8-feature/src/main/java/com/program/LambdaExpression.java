@@ -1,4 +1,4 @@
-package com.wscode.v8;
+package com.program;
 
 public class LambdaExpression {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.wscode;
+package com.program;
 
 public class Employee {
 	int id;

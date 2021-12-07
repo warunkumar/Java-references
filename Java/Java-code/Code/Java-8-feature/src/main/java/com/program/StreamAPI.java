@@ -1,12 +1,11 @@
-package com.wscode.v8.stream;
+package com.program;
 
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 import java.util.stream.Collectors;
-import java.util.stream.Stream;
 
-import com.wscode.Employee;
+import com.program.Employee;
 
 public class StreamAPI {
 	public static void main(String[] args) {
