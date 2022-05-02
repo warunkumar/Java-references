@@ -15,6 +15,7 @@ public class AccountController {
 
     @GetMapping(value = "/test")
     public String test() {
+        =new String();
 
         return "This is Warun! Welcome to world";
     }
