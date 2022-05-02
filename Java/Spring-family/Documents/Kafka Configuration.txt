@@ -1,0 +1,30 @@
+==================================================
+
+
+
+
+
+
+offsets.topic.num.partitions=1
+min.insync.replicas=1
+default.replication.factor=1
+
+to start zookeeper
+	.\bin\windows\zookeeper-server-start.bat .\config\zookeeper.properties
+
+to start kafka
+	.\bin\windows\kafka-server-start.bat .\config\server.properties
+
+to create topic
+	.\bin\windows\kafka-topics.bat --create --zookeeper localhost:2181 --replication-factor 1 --partitions 1 --topic was
+	.\bin\windows\kafka-topics.bat --create --bootstrap-server localhost:9092 --replication-factor 1 --partitions 1 --topic was
+
+to see what topic are available
+	.\bin\windows\kafka-topics.bat --list --zookeeper localhost:2181
+	.\bin\windows\kafka-topics.bat --list --bootstrap-server localhost:9092
+
+to send some message producer
+	.\bin\windows\kafka-console-producer.bat --broker-list localhost:9092 --topic was
+	
+to see the message consumer	
+	.\bin\windows\kafka-console-consumer.bat --bootstrap-server localhost:9092 --topic was --from-beginning
