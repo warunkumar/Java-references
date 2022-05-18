@@ -6,8 +6,6 @@ public class Test {
 
     public static void main(String[] args){
 
-        Scanner sc=new
-
 
         //india , Aus, US
         Map<String, String> map=new HashMap<>();

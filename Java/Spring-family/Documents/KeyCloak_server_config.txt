@@ -1,0 +1,11 @@
+Start the server
+> cd C:\My_Bosch\Software\Keycloak\keycloak-18.0.0\keycloak-18.0.0\bin
+> kc.bat start-dev
+
+Create admin
+-----------
+username: admin/admin
+
+Create username
+---------------
+username: warunkumar/admin
