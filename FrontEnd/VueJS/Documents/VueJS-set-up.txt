@@ -1,0 +1,11 @@
+
+VueJS Environment set up
+-------------------------------------
+1) install npm
+2) download visual studio code and open
+3) npm install -g @vue/cli
+4) vue create hello-world
+5) go to the project directory like cd hello-world
+6) for run-> npm run serve
+7) To show the content of .vue in a formate-> install the extenstion vetur
+8) To add the axios-> npm install --save axios
